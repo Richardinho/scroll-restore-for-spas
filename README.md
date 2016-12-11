@@ -9,7 +9,7 @@ The purpose of this article is to discuss solutions to manually implementing thi
 
 ### Implementation
 
-Scroll restoration requires saving the scroll position of the page as the user navigates away from it, either via a link or through the back/forward buttons, then when the user returns to this page when navigating through the history, retrieving this data and resetting the scroll position within the page.
+Scroll restoration requires saving the scroll position of the page as the user navigates away from it  via a link or through the back/forward buttons. Then when the user returns to this page by navigating through the history, retrieving this data and resetting the scroll position within the page.
 
 There are three steps to consider: 1. How to detect when the user is navigating away from the page, 2. Where to store the scroll data so that it can be retrieved, and 3. retrieving the value and setting the scroll amount.
 

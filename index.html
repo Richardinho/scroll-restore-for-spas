@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin :0;
+        }
+
+        p {
+            font-size : 2em;
+            margin : 0;
+
+        }
+
+        a {
+            font-weight : bold;
+        }
+
+        .fantastic-adventures, .holocene {
+            padding : 20px;
+        }
+        .fantastic-adventures {
+            background : orchid;
+        }
+
+        img {
+            float : left;
+            width : 200px;
+            margin-right : 10px;
+        }
+
+        h2 {
+            margin : 0
+        }
+
+        .holocene {
+            background: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <script type='html/template' id='header-template'>
+        <div>
+            <a data-internal href="/holocene">Holocene Period</a>
+            <a data-internal href="/fantastic-adventures">Fantastic Adventures</a>
+        </div>
+    </script>
+
+    <script type='html/template' id='fa-template'>
+        <div class='fantastic-adventures'>
+        <h2>Fantastic Adventures</h2>
+        <div>
+            <a data-internal href="/holocene">Holocene Period</a>
+        </div>
+        <p class='large'>
+           Fantastic Adventures was an American pulp fantasy and science fiction magazine, edited by Ray Palmer and published from 1939 to 1953 by Ziff-Davis. It was almost cancelled at the end of 1940, but the October 1940 issue had unexpectedly good sales, helped by a strong cover (pictured) by J. Allen St. John for Robert Moore Williams' Jongor of Lost Land. Fantastic Adventures soon developed a reputation for light-hearted and whimsical stories. The cover art usually focused on melodramatic action scenes; H.W. McCauley's covers, featuring glamorous, alluring women, were among the most popular. In 1949 Palmer was replaced by Howard Browne, who was knowledgeable and enthusiastic about fantasy fiction. Browne briefly managed to improve the quality of the fiction in Fantastic Adventures, and the period around 1951 has been described as the magazine's heyday. Browne lost interest when his plan to take Amazing Stories more upmarket collapsed, however, and the magazine fell back into predictability. In 1952, Ziff-Davis launched another fantasy magazine, titled Fantastic, in a digest format; it was successful, and in March 1953 they ended Fantastic Adventures in favor of Fantastic.
+        </p>
+            <img src='/img/fantastic-adventures-1940-oct.jpg'/>
+            <a data-internal href="/holocene">Holocene Period</a>
+        <p class='large'>
+            Although science fiction (sf) had been published before the 1920s, it did not begin to coalesce into a separately marketed genre until the appearance in 1926 of Amazing Stories, a pulp magazine published by Hugo Gernsback. By the end of the 1930s the field was undergoing its first boom.[1] Gernsback lost control of Amazing Stories in 1929; it was sold to Teck Publications, and then in 1938 it was acquired by Ziff-Davis.[2][3] The following year Ziff-Davis launched Fantastic Adventures as a companion to Amazing; the first issue was dated May 1939, and the editor of Amazing, Ray Palmer, took on responsibility for the new magazine as well.[4]
+
+            Fantastic Adventures was initially published in bedsheet format,[note 1] the same size as the early sf magazines such as Amazing,[6][7] perhaps in order to attract fans who were nostalgic for the larger format.[8] It started as a bimonthly, but in January 1940 began a monthly schedule. Sales were weaker than for Amazing, however, and with the June issue the schedule reverted to bimonthly. The size was also reduced to a standard pulp format, since that was cheaper to produce. Sales did not improve, and Ziff-Davis planned to make the October issue the last one. That issue carried Robert Moore Williams' Jongor of Lost Land, and had a cover by J. Allen St. John; the combination proved to be so popular that October sales were twice the August figures. This convinced Ziff-Davis that the magazine was viable, and it was restarted in January 1941—as a bimonthly at first, but switching to monthly again in May of that year.[4][8]
+
+            Howard Browne took over as editor of both Amazing Stories and Fantastic Adventures in 1950. Browne preferred fantasy to science fiction, and enjoyed editing Fantastic Adventures, but when his plans for taking Amazing upmarket were derailed by the Korean War, he lost interest in both magazines for a while.[9][10] He let William Hamling take responsibility for both titles, and the quality declined. At the end of 1950, Ziff-Davis moved its offices from Chicago to New York; Browne relocated to New York, but Hamling decided to stay in Chicago, so Browne became more involved once again, and sf historians such as Brian Stableford and Mike Ashley consider the result to have been a definite improvement in quality.[7][9] Browne's interest in fantasy led him to start a new digest-sized magazine, Fantastic, in the summer of 1952; it was an immediate success, and led Ziff-Davis to convert Amazing Stories to digest format as well. The move from the pulp format to digests was well under way in the early 1950s, and with Fantastic's success there was little reason to keep Fantastic Adventures going. It was merged with Fantastic; the last issue was dated March 1953, and the May–June issue of Fantastic added a mention of Fantastic Adventures to the masthead, though this disappeared with the following issue.[10]
+        </p>
+            </div>
+    </script>
+
+    <script type='html/template' id='holocene-template'>
+        <div class='holocene'>
+        <h2>The Holocene period</h2>
+        <div>
+            <a data-internal href="/fantastic-adventures">Fantastic Adventures</a>
+        </div>
+        <p>
+          The Holocene (pronunciation: /ˈhɒləˌsiːn, ˈhoʊ-/)[1][2] is the geological epoch that began after the Pleistocene[3] at approximately 9,700 BCE.[4] The term "Recent" (usually capitalised) has often been used as an exact synonym of "Holocene", although this usage is discouraged in 21st-century science.[5] The Holocene is part of the Quaternary period. Its name comes from the Ancient Greek words ὅλος (holos, whole or entire) and καινός (kainos, new), meaning "entirely recent".[6] It has been identified with the current warm period, known as MIS 1, and can be considered an interglacial in the current ice age based on that evidence.
+            <a data-internal href="/fantastic-adventures">Fantastic Adventures</a>
+            <img src='/img/doggerland.png'>
+            The Holocene also encompasses the growth and impacts of the human species worldwide, including all its written history, development of major civilizations, and overall significant transition toward urban living in the present. Human impacts on modern-era Earth and its ecosystems may be considered of global significance for future evolution of living species, including approximately synchronous lithospheric evidence, or more recently atmospheric evidence of human impacts. Given these, a new term, Anthropocene, is specifically proposed and used informally only for the very latest part of modern history involving significant human impact.[7]
+        </p>
+            </div>
+    </script>
+
+    <div id='app'></div>
+
+    <script src='/node_modules/Diogenes/lib/injector.js'></script>
+    <script src='/node_modules/jquery/dist/jquery.min.js'></script>
+    <script src='/node_modules/underscore/underscore.js'></script>
+    <script src='/node_modules/backbone/backbone.js'></script>
+    <script src='/js/controllers/fantastic-adventures-controller-factory.js'></script>
+    <script src='/js/scroll-handler.js'></script>
+    <script src='/js/link-handler.js'></script>
+    <script src='/js/controllers/holocene-controller-factory.js'></script>
+    <script src='/js/views/fantastic-adventures-view.js'></script>
+    <script src='/js/views/holocene-view.js'></script>
+    <script src='/js/app.js'></script>
+    <script src='/js/page-manager.js'></script>
+    <script src='/js/router.js'></script>
+    <script src='/js/main.js'></script>
+
+
+</body>
+</html>
