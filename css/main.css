@@ -1,0 +1,97 @@
+body {
+  margin :0;
+  font-family: helvetica;
+  padding: 2rem;
+}
+
+p {
+  font-size : 2em;
+  margin : 0;
+  border-bottom: solid 1rem black;
+  padding: 1rem;
+}
+
+a {
+  font-weight : bold;
+}
+
+img {
+  width : 200px;
+  display: inline-block;
+}
+
+.grid-1 {
+  counter-reset: section;
+  background-image: url(/img/superman.jpg);
+  background-size: cover;
+  background-position: center top;
+}
+
+.grid-1 > div {
+
+  height: 150px;
+  width: 100%;
+  opacity: 0.8;
+  border-bottom: 3px solid black;
+  
+}
+.grid-1 > div:nth-child(4n+2) {
+  background: green;
+}
+.grid-1 > div:nth-child(4n+1) {
+  background: blue;
+}
+.grid-1 > div:nth-child(4n) {
+  background: gold;
+}
+
+.grid-1 > div::before {
+  counter-increment: section;
+  content: counter(section);
+}
+
+.grid {
+  counter-reset: section;
+  background-image: url(/img/spiderman.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.grid > div {
+
+  height: 150px;
+  width: 100%;
+  opacity: 0.8;
+  border-bottom: 3px solid black;
+  
+}
+.grid > div:nth-child(4n+2) {
+  background: red;
+}
+.grid > div:nth-child(4n+1) {
+  background: orange;
+}
+.grid > div:nth-child(4n) {
+  background: yellow;
+}
+
+.grid > div::before {
+  counter-increment: section;
+  content: counter(section);
+
+}
+
+h2 {
+  margin : 0
+}
+
+.fantastic-adventures,
+.holocene {
+}
+
+.fantastic-adventures {
+  background : orchid;
+}
+
+.holocene {
+}

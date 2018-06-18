@@ -1,25 +1,22 @@
 var scrollHandler = function () {
-    var timerId;
+  var timerId;
 
-    function replaceState() {
+  function replaceState() {
+    let scrollTop = window.pageYOffset;
+    history.replaceState(
+      _.extend(history.state || {}, {
+        scrollTop: scrollTop 
+      }),
+      document.title,
+      window.location
+    );
+  }
 
-        history.replaceState(
-            _.extend(history.state || {}, {
-                scrollTop: document.body.scrollTop || $(document).scrollTop()
-            }),
-            document.title,
-            window.location
-        );
-    }
+  return function () {
+    window.addEventListener('scroll', function () {
+      //clearTimeout(timerId);
 
-    return function () {
-
-        window.addEventListener('scroll', function () {
-
-            clearTimeout(timerId);
-
-            timerId = setTimeout(replaceState, 50);
-        });
-    }
-
+      //     timerId = setTimeout(replaceState, 50);
+    });
+  }
 }
