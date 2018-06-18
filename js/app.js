@@ -11,13 +11,12 @@ App.prototype = {
     this.router.route('fantastic-adventures', this.fantasticAdventuresControllerFactory);
     this.router.route('holocene', this.holoceneControllerFactory);
 
-
     window.addEventListener('popstate', () => {
       console.log('pop!');
     });
+
     window.addEventListener('scroll', () => {
-    
-   console.log('scrollllllllllled'); 
+      console.log('scrollllllllllled'); 
     });
 
     this.linkHandler();

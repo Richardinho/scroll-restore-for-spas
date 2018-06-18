@@ -2,9 +2,12 @@ function holoceneControllerFunction(options) {
 
   var pageManager = options.pageManager;
   var view = options.holoceneView;
+  var service = options.service;
 
   return function handleRequest() {
-    pageManager.render(view.render());
+    service.getData().then(() => {
+      pageManager.render(view.render());
+    });
     
     //if (history.state) {
       //var scrollTop = window.history.state.scrollTop;
@@ -14,5 +17,6 @@ function holoceneControllerFunction(options) {
 }
 holoceneControllerFunction.inject = [
   'holoceneView',
-  'pageManager'
+  'pageManager',
+  'service',
 ];

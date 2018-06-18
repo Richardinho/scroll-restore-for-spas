@@ -5,6 +5,7 @@ injector.register('app',             App,            Diogenes.INSTANCE);
 injector.register('holoceneView',    HoloceneView,   Diogenes.INSTANCE);
 injector.register('linkHandler',     linkHandler,    Diogenes.FACTORY);
 injector.register('scrollHandler',   scrollHandler,  Diogenes.FACTORY);
+injector.register('service',         service,        Diogenes.FACTORY);
 
 injector.register('fantasticAdventuresControllerFactory',
   fantasticAdventuresControllerFunction,
